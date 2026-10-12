@@ -1,0 +1,98 @@
+:root {
+  --paper: #f8f4f2;
+  --card: #fffcfb;
+  --blush: #f7e4e8;
+  --ink: #2a2125;
+  --ink-soft: #6a5960;
+  --accent: #a3324f;
+  --petal: #e07a93;
+  --stamen: #b88a3e;
+  --rule: #eadfe2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #161114;
+    --card: #221a1e;
+    --blush: #36202a;
+    --ink: #f4ecef;
+    --ink-soft: #bfb0b6;
+    --accent: #e69cae;
+    --petal: #e78aa0;
+    --stamen: #d9b36a;
+    --rule: #3a2b31;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+h1, h2, .brand {
+  font-family: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h1 { font-size: 2.1rem; margin: 0.2em 0 0.1em; }
+h2 { font-size: 1.35rem; margin: 2.2em 0 0.5em; }
+
+p, li { color: var(--ink); }
+.muted { color: var(--ink-soft); }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+
+header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.summary {
+  background: var(--blush);
+  border-radius: 20px;
+  padding: 18px 22px;
+  margin: 28px 0 8px;
+}
+.summary p { margin: 0.4em 0; }
+
+ul { padding-left: 1.25em; }
+li { margin: 0.35em 0; }
+
+.card-list { list-style: none; padding: 0; }
+.card-list li {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+.card-list a { font-family: ui-serif, "New York", Georgia, serif; font-size: 1.15rem; }
+
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.blossom .petal { fill: var(--petal); }
+.blossom .stamen { stroke: var(--stamen); }
+.blossom .pollen { fill: var(--stamen); }
+.blossom .heart { fill: var(--accent); }
